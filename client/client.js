@@ -309,7 +309,8 @@ function join(channel) {
 		// to the new port (example: ':8080')
 		// if you are reverse proxying, change 'wsPath' to the new location
 		// (example: '/chat-ws')
-		var wsPath = ':6060';
+//		var wsPath = ':6060';
+		var wsPath = '/ws-chat';// 还是这样看起来舒服
 		ws = new WebSocket(protocol + '//' + document.domain + wsPath);
 	}
 
