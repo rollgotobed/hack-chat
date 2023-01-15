@@ -7,6 +7,14 @@
  *
 */
 
+//select "chatinput" on "/"
+document.addEventListener("keydown", e => {
+    if (e.key === '/' && document.getElementById("chatinput") != document.activeElement) {
+        e.preventDefault();
+        document.getElementById("chatinput").focus();
+    }
+});
+
 // initialize markdown engine
 var markdownOptions = {
 	html: false,
@@ -424,7 +432,7 @@ function pushMessage(args) {
 
 	messageEl.classList.add('message');
 
-	if (verifyNickname(myNick) && args.nick == myNick) {
+	if (verifyNickname(myNick.split('#')[0]) && args.nick == myNick.split('#')[0]) {
 		messageEl.classList.add('me');
 	} else if (args.nick == '!') {
 		messageEl.classList.add('warn');
