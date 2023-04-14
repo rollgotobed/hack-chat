@@ -838,7 +838,8 @@ var schemes = [
 	'Ubuntu',
 	'gruvbox-light',
 	'fried-egg',
-	'rainbow'
+	'rainbow',
+	'amoled'
 ];
 
 var highlights = [
